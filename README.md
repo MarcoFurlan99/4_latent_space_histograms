@@ -52,7 +52,12 @@ Here is the usual graph with the results:
 
 <img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/results.png?raw=true">
 
-And here are the latent space histograms relative to the 0th dmension
+Some observations:
+- generally, UNet without BN does not do well with new datasets, with 2 remarkable exceptions: *edges-(28,50,228,50)*, having 0.92 IoU, and *gradient-edges* having 0.95 IoU.
+
+- BN adaptation works well in the white noise targets (the ones represented by 4-tuples), but not as well in the other 3 (*random*, *gradient*, *edges*). Plus, the effective increase is hard to explain sometimes (a prime example is the last two target datasets, *(33, 10, 43, 100)* and *(56, 100, 66, 10)*, which are notably hard to predict given our source datasets, but in some cases BN adaptation does miracles).
+
+And here are the latent space histograms relative to the 0th dimension
 
 <img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/dim0.png?raw=true">
 
