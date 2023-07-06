@@ -1,4 +1,4 @@
-# some new datasets
+# New datasets
 
 I created new datasets with the same underlying masks. The masks are always generated with the same algorithm:
 
@@ -21,12 +21,12 @@ Obtained creating two random perlin noises grayscales (shifted to avoid the issu
 Usual white noise but we randomize the parameters $(\mu_1,\sigma_1, \mu_2, \sigma_2)$, in the following way:
 - $\mu_1$ random integer in $[10, 244]$
 - $\sigma_1$ random integer in $[1, 100]$
-- $\mu_2$ random integer in $[\mu_2, 244]$
+- $\mu_2$ random integer in $[\mu_1, 244]$
 - $\sigma_2$ random integer in $[1, 100]$
 
 <img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/random.png?raw=true">
 
-# the second experiment
+# The experiment
 
 These new datasets allow a bigger variety of casistics than the usual white noise datasets with fixed parameters $(\mu_1,\sigma_1, \mu_2, \sigma_2)$. What I did is I trained the model on 5 source datasets, and got the results on 10 (distinct) target datasets. The division was done in the following way:
 
@@ -52,4 +52,12 @@ Here is the usual graph with the results:
 
 <img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/results.png?raw=true">
 
-So we see that when tested on the usual datasets (the 5 )
+And here are the latent space histograms relative to the 0th dmension
+
+<img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/dim0.png?raw=true">
+
+<img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/dim0_adapted.png?raw=true">
+
+And the training history:
+
+<img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/training_history.png?raw=true">
