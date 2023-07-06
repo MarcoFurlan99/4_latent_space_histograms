@@ -12,7 +12,6 @@ $$\begin{bmatrix}
 -1 & -1 & -1\\
 -1 &  8 & -1\\
 -1 & -1 & -1\\
-
 \end{bmatrix}$$
 
 <img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/edges.png?raw=true">
