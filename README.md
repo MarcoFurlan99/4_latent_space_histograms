@@ -6,7 +6,12 @@ I created new datasets with the same underlying masks. The masks are always gene
 
 ## edges
 
-Obtained convolving the mask with the filter $1$
+Obtained convolving the mask with the filter
+
+$$\begin{bmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{bmatrix}$$
 
 <img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/edges.png?raw=true">
 
