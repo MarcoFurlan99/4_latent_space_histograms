@@ -9,8 +9,10 @@ I created new datasets with the same underlying masks. The masks are always gene
 Obtained convolving the mask with the filter
 
 $$\begin{bmatrix}
-1 & 2 & 3\\
-a & b & c
+-1 & -1 & -1\\
+-1 &  8 & -1\\
+-1 & -1 & -1\\
+
 \end{bmatrix}$$
 
 <img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/edges.png?raw=true">
