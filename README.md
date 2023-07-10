@@ -32,7 +32,7 @@ Usual white noise but we randomize the parameters $(\mu_1,\sigma_1, \mu_2, \sigm
 
 <img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/random.png?raw=true">
 
-# The experiment
+# Experiment \#1
 
 These new datasets allow a bigger variety of casistics than the usual white noise datasets with fixed parameters $(\mu_1,\sigma_1, \mu_2, \sigma_2)$. What I did is I trained the model on 5 source datasets, and got the results on 10 (distinct) target datasets. The division was done in the following way:
 
@@ -74,3 +74,35 @@ And here are the latent space histograms relative to the 0th dimension
 And the training history:
 
 <img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/training_history.png?raw=true">
+
+# Experiment \#2
+
+Here are the results from a second experiment:
+
+<img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/samples_2.png?raw=true">
+
+<img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/graph_2d.png?raw=true">
+
+<img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/graph_2d_adapted.png?raw=true">
+
+<img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/graph_2d_diff.png?raw=true">
+
+For a better intuition I replaced the labels with samples:
+
+<img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/graph_2d_imgs.png?raw=true">
+
+<img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/graph_2d_adapted_imgs.png?raw=true">
+
+<img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/graph_2d_diff_imgs.png?raw=true">
+
+Observations:
+
+- First 4 datasets are with $\frac{\mu_2 + \mu_1}{2} = 128$ constant. Next 4 datasets have $\mu_2 - \mu_1 = 40$ constant. Last 3 datasets are just other types of datasets.
+
+- BN adaptation excels when the target is the 4 central datasets (where $\mu_2 - \mu_1 = 40$). It can correct inaccurate predictions when the target is the first 4 datasets (not super evident from here but we already saw that). Funnily it also works well for the 'edges' one. Other than that it does not drastically reduce the performance in any case; this is not true in general as seen from previous experiments.
+
+For completeness, I also leave the training history:
+
+<img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/training_history_2.png?raw=true">
+
+Now the big question is: how do we predict the BN adaptation performance???
