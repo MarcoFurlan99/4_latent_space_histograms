@@ -105,4 +105,6 @@ For completeness, I also leave the training history:
 
 <img src="https://github.com/MarcoFurlan99/4_latent_space_histograms/blob/master/images/training_history_2.png?raw=true">
 
-Now the big question is: how do we predict the BN adaptation performance???
+Unfortunately the computation failed during the calculation of the histograms, I'll see if I can get them before the next reunion.
+
+Now the question is: how do we try to predict the BN adaptation performance?
